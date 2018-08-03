@@ -1,5 +1,3 @@
-/* Тут типо коммент добавил */
-
 body {
     margin: 0;
     padding: 0;
@@ -324,4 +322,10 @@ a {
 .restore:hover,
 .restore:focus {
     text-decoration: none;
+}
+
+/* czcx */
+
+.main-header {
+    margin-bottom: 75px;
 }

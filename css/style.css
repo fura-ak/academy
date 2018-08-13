@@ -442,6 +442,7 @@ input[type="radio"].visually-hidden {
     margin-left: -230px;
     width: 300px;
     padding: 50px 80px;
+    display: none;
 }
 .modal-close {
     position: absolute;
@@ -523,10 +524,43 @@ input[type="radio"].visually-hidden {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 15px 0;
+}
+.login-checkbox {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.login-checkbox input[type="checkbox"] + .checkbox-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #000000;
 }
 
-
-
+.login-checkbox input[type="checkbox"]:focus + .checkbox-indicator {
+    border-color: #663b15;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    width: 15px;
+    height: 2px;
+    background-color: #000000;
+}
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+    transform: rotate(45deg);
+}
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+    transform: rotate(-45deg);
+}
 
 .login-icon-user {
     background: url(../img/user.svg) 270px center no-repeat;
@@ -545,6 +579,24 @@ input[type="radio"].visually-hidden {
 .restore:focus {
     text-decoration: none;
 }
+
+
+.modal-map {
+    top: 50%;
+    left: 50%;
+    width: 766px;
+    height: 550px;
+    margin-top: -280px;
+    margin-left: -390px;
+    border: 7px solid white;
+    display: none;
+}
+
+.modal-map p {
+    margin: 0;
+}
+
+
 
 /* Сетка */
 .container {
